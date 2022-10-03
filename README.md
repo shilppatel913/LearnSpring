@@ -26,7 +26,7 @@ After this point the application code can simply get the objects from the contai
 It is a representation of Spring IOC container class.
 It is an interface and has sub classes whose objects can be created (XML ,ANNOTATION,FILE)
 
-**Types of Dependency Injection **
+**Types of Dependency Injection**
 1) Using Setter method - Making setter methods to access the values of the attributes of the dependent class as well as the values of attributes of the class it is dependent on.
 2) Using Constructor method - Making constructor methods to access the values of the attributes of the dependent class as well as the values of attributes of the class it is dependent on.
 
