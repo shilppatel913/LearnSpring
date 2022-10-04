@@ -9,16 +9,38 @@
  https://www.springframework.org/schema/context/spring-context.xsd"
  >
  <!-- the property tag uses the setter methods to get the value in the main class -->
- 	<bean class="corespring.springcore.Student" name="Student1">
- 			<property name="studentId" value="22334">
+ 	<bean class="corespring.springcore.collections.Employee" name="emp1">
+ 			<property name="empName" value="Shilp Patel">
+ 			
  			</property>
  			
- 			<property name="studentName" value="ShilpPatel">
+ 			<property name="phones" >
+ 				<set>
+ 						<value>9375499974</value>
+ 						<value>54434224432</value>
+ 				</set>
  				
  			</property>
  			
- 			<property name="studentAddress" value="Gujarat">
+ 			<property name="addresses">
+ 				<list>
+ 					<value>Gujarat</value>
+ 					<value>Delhi</value>
+ 					<value>Uttar Pradesh</value>
+ 				</list>
+ 			</property>
  			
+ 			<property name="courses">
+ 				<map>
+ 					<entry key="Shilp" value="Science"/>
+ 				</map>
+ 			</property>
+ 			
+ 			<property name="props">
+ 				<props>
+ 					<prop key="name">Shilp</prop>
+ 					<prop key="designation">Developer</prop>
+ 				</props>
  			</property>
  	</bean>
  

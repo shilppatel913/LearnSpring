@@ -8,24 +8,17 @@
  https://www.springframework.org/schema/context
  https://www.springframework.org/schema/context/spring-context.xsd"
  >
- 
+ <!-- the property tag uses the setter methods to get the value in the main class -->
  	<bean class="corespring.springcore.Student" name="Student1">
- 			<property name="studentId">
- 				<value>
- 					2233
- 				</value>
+ 			<property name="studentId" value="22334">
  			</property>
  			
- 			<property name="studentName">
- 				<value>
- 					Shilp Patel
- 				</value>
+ 			<property name="studentName" value="ShilpPatel">
+ 				
  			</property>
  			
- 			<property name="studentAddress">
- 				<value>
- 					Gujarat
- 				</value>
+ 			<property name="studentAddress" value="Gujarat">
+ 			
  			</property>
  	</bean>
  
