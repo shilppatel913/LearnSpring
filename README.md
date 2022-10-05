@@ -51,5 +51,9 @@ The sequential steps while creating a bean are as follows :
 5) destroy() method is called.
 6) Closing the bean.
 
+**Configure technique**
+1) Using xml 
+2) Using spring interface
+3) Using Annotation
 
 
