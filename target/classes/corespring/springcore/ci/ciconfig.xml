@@ -18,6 +18,11 @@
  		<constructor-arg value="12" type="int" />
  		<constructor-arg ref="cert"/>	
  	</bean>
+ 	
+ 	<bean class="corespring.springcore.ci.Addition" name="add1">
+ 		<constructor-arg value="12"/>
+ 		<constructor-arg value="25"/>
+ 	</bean>
  
  	
 </beans>
