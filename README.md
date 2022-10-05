@@ -56,4 +56,21 @@ The sequential steps while creating a bean are as follows :
 2) Using spring interface
 3) Using Annotation
 
+**Autowiring**
+It is a very useful feature of spring framework in which spring container injects the dependencies automatically.
+Manual injection is no more needed in auto wiring.
+It only works on referencing type that is objects.
+
+**You can do autowiring with help of two things**
+1) Using XML
+  Autowiring modes :
+    no mode
+    byName
+    byType
+    constructor
+    auto-detect - deprecated in spring3
+    
+ 2) Using Annotation
+  @Autowire annotation can be used to perform autowiring.
+
 
