@@ -17,6 +17,9 @@ public class Test3 {
 		
 		Pepsi p1=(Pepsi)context.getBean("pepsi1");
 		System.out.println(p1);
+		
+		Example e1=(Example)context.getBean("example1");
+		System.out.println(e1);
 	}
 
 }

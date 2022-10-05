@@ -8,7 +8,9 @@
  https://www.springframework.org/schema/context
  https://www.springframework.org/schema/context/spring-context.xsd"
  >
+ 	
  <!-- the property tag uses the setter methods to get the value in the main class -->
+ 	
  	<bean class="corespring.springcore.lifecycle.Random" name="random1" init-method="init" destroy-method="destroy">
  			<property name="price" value="222.33" />
  	</bean>
@@ -16,6 +18,12 @@
  	<bean class="corespring.springcore.lifecycle.Pepsi" name="pepsi1">
  		<property name="price" value="500" />
  	</bean>
- 
+ 	
+ 	<bean class="corespring.springcore.lifecycle.Example" name="example1">
+ 		<property name="subject" value="maths" />
+ 	
+ 	</bean>
+ 	
+ 	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
  	
 </beans>
