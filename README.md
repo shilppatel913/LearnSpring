@@ -35,5 +35,21 @@ Configuration file is an XML file where we have to mention all the beans(the cla
 them and make changes accordingly.
 Spring IOC supports primitive datatypes, Collection type and user defined types and works well with each of them equally.
 
+**Lifecycle methods of Spring IOC**
+There are two important methods which will be called while creating a bean in our configuration file.
+1) public void init()- You can change the function name but not the signature
+2) public void destroy()- You can change the function name but not the signature
+
+The init() method initializes all the work beforehand like connecting to the db or integrating a particular webservice in the configuration file.
+The destroy() method closes all the open connections or webservices and stores the work for later purposes when the user is not using the system anymore.
+
+The sequential steps while creating a bean are as follows :
+1) Creating object of the bean.
+2) Setting the values of the attributes of that object with setter and constructor injection.
+3) Calling init() method
+4) Reading and using the bean.
+5) destroy() method is called.
+6) Closing the bean.
+
 
 
