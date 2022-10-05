@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd"
+ >
+ <!-- the property tag uses the setter methods to get the value in the main class -->
+ 	<bean class="corespring.springcore.auto.wire.Address" name="address">
+ 		<property name="state" value="delhi" />
+ 		<property name="city" value="meerut" />
+ 	</bean>
+ 	<bean class="corespring.springcore.auto.wire.Address" name="address2">
+ 		<property name="state" value="Gujarat" />
+ 		<property name="city" value="Ahmedabad" />
+ 	</bean>
+ 	
+ 	<!-- Now we can autowire the above address in the below Employee class -->
+ 	<bean class="corespring.springcore.auto.wire.Employee" name="emp1" autowire="constructor" />
+ 
+ 	
+</beans>
