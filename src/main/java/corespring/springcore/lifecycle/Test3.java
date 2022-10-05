@@ -14,6 +14,9 @@ public class Test3 {
 //		context.registerShutdownHook();
 		System.out.println(r1);
 		context.registerShutdownHook();
+		
+		Pepsi p1=(Pepsi)context.getBean("pepsi1");
+		System.out.println(p1);
 	}
 
 }

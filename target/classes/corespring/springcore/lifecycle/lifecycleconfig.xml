@@ -12,6 +12,10 @@
  	<bean class="corespring.springcore.lifecycle.Random" name="random1" init-method="init" destroy-method="destroy">
  			<property name="price" value="222.33" />
  	</bean>
+ 	
+ 	<bean class="corespring.springcore.lifecycle.Pepsi" name="pepsi1">
+ 		<property name="price" value="500" />
+ 	</bean>
  
  	
 </beans>
