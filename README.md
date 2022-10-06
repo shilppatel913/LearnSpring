@@ -72,5 +72,11 @@ It only works on referencing type that is objects.
     
  2) Using Annotation
   @Autowire annotation can be used to perform autowiring.
+  
+  
+  **Standalone Collections**
+  Until now we have been creating a collection specific to a particular property using the list tag. Now with the help of util schema we can 
+  create standalone collections where we can mention the type of the class of a particular interface and declare it globally so that we can use 
+  the same list/set/map in multiple beans without having to copy paste it again and again.
 
 
