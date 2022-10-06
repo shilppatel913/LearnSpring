@@ -11,10 +11,10 @@
  
  <context:annotation-config />
  <!-- the property tag uses the setter methods to get the value in the main class -->
- 	<!-- <bean class="corespring.springcore.auto.wire.annotation.Address" name="address">
+ 	 <bean class="corespring.springcore.auto.wire.annotation.Address" name="address">
  		<property name="state" value="delhi" />
  		<property name="city" value="meerut" />
- 	</bean> -->
+ 	</bean> 
  	 <bean class="corespring.springcore.auto.wire.annotation.Address" name="address2">
  		<property name="state" value="Gujarat" />
  		<property name="city" value="Ahmedabad" />
