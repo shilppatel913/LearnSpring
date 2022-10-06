@@ -86,3 +86,15 @@ The <context:component-scan base-package="" /> will declare a bean for you given
 The object name will be in the camel case format by default , you can also change it inside the compnent args according to your need.
 You can set the value of the attributes using @Value annotation above every attribute and mentioning the value.
 
+
+
+**Bean Scope**
+When we are accessing the object of a bean there are different types of scopes associated with it.
+1) Singleton - Everytime you get the object the same object will be referenced for you if the scope is singleton
+2) Prototyope - Everytime you get the object different object will be created for you if the scope is prototype
+3) Request 
+4) Session
+5) GlobalSession
+
+We can mention the scope in the bean tag or using annotations with @Component annotation only.
+
