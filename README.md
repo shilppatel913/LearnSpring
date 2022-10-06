@@ -80,3 +80,9 @@ It only works on referencing type that is objects.
   the same list/set/map in multiple beans without having to copy paste it again and again.
 
 
+**Stereotyoe Annotation**
+We can use @Component annotation to declare a bean rather than using a bean tag inside the xml file
+The <context:component-scan base-package="" /> will declare a bean for you given you have used the @Component annotation
+The object name will be in the camel case format by default , you can also change it inside the compnent args according to your need.
+You can set the value of the attributes using @Value annotation above every attribute and mentioning the value.
+
