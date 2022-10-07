@@ -98,3 +98,8 @@ When we are accessing the object of a bean there are different types of scopes a
 
 We can mention the scope in the bean tag or using annotations with @Component annotation only.
 
+**Spring Expression Language**
+We can perform certain computations in the form of an expression language and pass it inside the @Value annotation.
+The expression can contain a simple computation ,static method which is returning a value , static variable, an object etc.
+General Format @Value("#{expression}")
+
