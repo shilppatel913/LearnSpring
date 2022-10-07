@@ -20,6 +20,8 @@ public class Demo {
 	//we can also use an object in the form of an expression
 	@Value("#{ new java.lang.String('Shilp Patel') }")
 	private String name;
+	@Value("#{ 8>3 }")
+	private boolean val;
 	public int getX() {
 		return x;
 	}
@@ -52,8 +54,10 @@ public class Demo {
 	}
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", a=" + a + ", name=" + name + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", a=" + a + ", name=" + name + ", val=" + val + "]";
 	}
+	
+	
 	
 	
 }
