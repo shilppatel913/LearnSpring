@@ -103,3 +103,8 @@ We can perform certain computations in the form of an expression language and pa
 The expression can contain a simple computation ,static method which is returning a value , static variable, an object etc.
 General Format @Value("#{expression}")
 
+
+**Removing XML file and configuring beans with only annotations**
+We can remove the whole xml file and we can create a new java class which is our configuration file and  declare beans using @componentScan annotation
+or directly the @Bean annotation.This way we can get rid of the xml configuration.
+
