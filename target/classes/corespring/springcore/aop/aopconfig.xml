@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+     http://www.springframework.org/schema/context 
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd"
+ >
+ 	<!--	we will configure all the beans related to aop !-->
+ 	<bean class="corespring.springcore.aop.LibraryService" name="libraryService"></bean>
+	 	<bean name="logInputAdvice"
+	    class="corespring.springcore.aop.LogInput" />
+	     
+	<bean name="logOutputAdvice"
+	    class="corespring.springcore.aop.LogOutput" />
+	     
+	<bean name="logExceptionAdvice"
+	    class="corespring.springcore.aop.LogException" />
+	     
+	<bean  name="performanceMonitoringAdvice"
+	    class="corespring.springcore.aop.PerformanceMonitoring" />
+	    
+	    
+	    <!-- let us declare our pointcut names and map them to the methods-->
+	    
+	    <bean name="logInputPointcutAdvisor"
+    	class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+    	<property name="advice" ref="logInputAdvice" />
+    	<property name="mappedName">
+        	<value>*Book</value>
+   		 </property>
+		</bean>
+		
+					<bean name="logOutputPointcutAdvisor"
+			    class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+			    <property name="advice" ref="logOutputAdvice" />
+			    <property name="mappedName">
+			        <value>*Book</value>
+			    </property>
+			</bean>
+			
+			<bean name="logExceptionPointcutAdvisor"
+			    class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+			    <property name="advice" ref="logExceptionAdvice" />
+			    <property name="mappedName">
+			        <value>*Book</value>
+			    </property>
+			</bean>
+			
+			
+			<bean name="performanceMonitoringPointcutAdvisor"
+			    class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+			    <property name="advice" ref="performanceMonitoringAdvice" />
+			    <property name="mappedName">
+			        <value>*Book</value>
+			    </property>
+			</bean>
+			
+			
+			<!--Declaring the bean for proxy object-->
+					<bean name="libraryServiceProxy"
+		    class="org.springframework.aop.framework.ProxyFactoryBean">
+		    <property name="target">
+		        <ref bean="libraryService" />
+		    </property>
+		    <property name="interceptorNames">
+		        <list>
+		            <value>logInputPointcutAdvisor</value>
+		            <value>logOutputPointcutAdvisor</value>
+		            <value>logExceptionPointcutAdvisor</value>
+		            <value>performanceMonitoringPointcutAdvisor</value>
+		        </list>
+		    </property>
+		</bean>
+			
+			
+			
+ 	
+</beans>
